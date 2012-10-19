@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<h2>
+    Store</h2>
+@using (Html.BeginForm("SearchId", "Home", FormMethod.Get))
+{
+    <p>
+        Enter number of card: @Html.TextBox("cardId")</p>
+    <br />
+    <input type="submit" id="search-submit" value="Search card" />
+}

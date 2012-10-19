@@ -1,0 +1,34 @@
+﻿@model IEnumerable<StoreCard.Models.Card>
+
+@{
+    ViewBag.Title = "About";
+}
+
+<h2>Statistic</h2>
+<p>In the database has @ViewBag.CountCard cards</p>
+<p>The top five cards: </p>
+<table>
+    <tr>
+        <th>
+            Amount
+        </th>
+        <th>Id</th>
+    </tr>
+
+    @foreach (StoreCard.Models.Card item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CardId)
+            </td>
+        </tr>
+    }
+
+</table>
+<br/>
+@using (Html.BeginForm())
+{
+    @Html.ActionLink("Save to PDF", "SaveToPDF", null, new { target = "_blank" })
+}

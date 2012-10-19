@@ -1,0 +1,9 @@
+D:\Learn\C#\ASP_NET\StoreCard\StoreCard\bin\StoreCard.dll
+D:\Learn\C#\ASP_NET\StoreCard\StoreCard\bin\StoreCard.pdb
+D:\Learn\C#\ASP_NET\StoreCard\StoreCard\bin\EntityFramework.dll
+D:\Learn\C#\ASP_NET\StoreCard\StoreCard\bin\EntityFramework.xml
+D:\Learn\C#\ASP_NET\StoreCard\StoreCard\obj\Debug\ResolveAssemblyReference.cache
+D:\Learn\C#\ASP_NET\StoreCard\StoreCard\obj\Debug\StoreCard.dll
+D:\Learn\C#\ASP_NET\StoreCard\StoreCard\obj\Debug\StoreCard.pdb
+D:\Learn\C#\ASP_NET\StoreCard\StoreCard\bin\itextsharp.dll
+D:\Learn\C#\ASP_NET\StoreCard\StoreCard\bin\itextsharp.pdfa.dll
