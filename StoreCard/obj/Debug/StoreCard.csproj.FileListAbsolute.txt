@@ -7,3 +7,9 @@ D:\Learn\C#\ASP_NET\StoreCard\StoreCard\obj\Debug\StoreCard.dll
 D:\Learn\C#\ASP_NET\StoreCard\StoreCard\obj\Debug\StoreCard.pdb
 D:\Learn\C#\ASP_NET\StoreCard\StoreCard\bin\itextsharp.dll
 D:\Learn\C#\ASP_NET\StoreCard\StoreCard\bin\itextsharp.pdfa.dll
+c:\Users\Chatlanin\Documents\GitHub\Cards\StoreCard\bin\StoreCard.dll
+c:\Users\Chatlanin\Documents\GitHub\Cards\StoreCard\bin\StoreCard.pdb
+c:\Users\Chatlanin\Documents\GitHub\Cards\StoreCard\bin\EntityFramework.xml
+c:\Users\Chatlanin\Documents\GitHub\Cards\StoreCard\obj\Debug\ResolveAssemblyReference.cache
+c:\Users\Chatlanin\Documents\GitHub\Cards\StoreCard\obj\Debug\StoreCard.dll
+c:\Users\Chatlanin\Documents\GitHub\Cards\StoreCard\obj\Debug\StoreCard.pdb
