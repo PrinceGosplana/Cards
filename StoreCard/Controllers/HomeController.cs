@@ -160,6 +160,7 @@ namespace StoreCard.Controllers
                     if (add >= 200)
                     {
                         card.Amount = add;
+                        //сохранение через вспомогательный класс DataManager
                         db.Save(card);
                     }
                     return RedirectToAction("Index");
