@@ -111,7 +111,8 @@ namespace StoreCard.Controllers
                 cardSearch = cardSearch.Where(c => c.CardId == it);
 
             }
-            if (cardSearch.Count() == 0)
+            
+            if (cardSearch.Count() == 0 || String.IsNullOrEmpty(cardId))
                 return RedirectToAction("Create");
             return View(cardSearch);
         }
@@ -122,19 +123,22 @@ namespace StoreCard.Controllers
         }
 
         [HttpPost]
-        public ActionResult AddToCard(Card card, double add)
+        public ActionResult AddToCard(Card card, string add)
         {
             if (ModelState.IsValid)
             {
+                if (string.IsNullOrEmpty(add))
+                    return RedirectToAction("AddToCard");
                 Card old = db.GetCard(card.CardId);
+                double money = Convert.ToDouble(add);
                 double mmoneyToCard = (double)old.Amount;
                 if (mmoneyToCard >= 500 && mmoneyToCard <= 2000)
-                    add *= 0.98;
+                    money *= 0.98;
                 if (mmoneyToCard >= 2000.01 && mmoneyToCard <= 5000)
-                    add *= 0.95;
+                    money *= 0.95;
                 if (mmoneyToCard >= 5000.01)
-                    add *= 0.93;
-                card.Amount += (decimal)add;
+                    money *= 0.93;
+                card.Amount += (decimal)money;
                 old.Amount += card.Amount;
                 db.SaveCard(old);
                 return RedirectToAction("Index");
@@ -151,15 +155,16 @@ namespace StoreCard.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(Card card, decimal add)
+        public ActionResult Create(Card card, string add)
         {
-            try
-            {
+            if (String.IsNullOrEmpty(add))
+                return RedirectToAction("Create");
                 if (ModelState.IsValid)
                 {
-                    if (add >= 200)
+                    double money = Convert.ToDouble(add);
+                    if (money >= 200)
                     {
-                        card.Amount = add;
+                        card.Amount = (decimal)money;
                         db.Save(card);
                     }
                     return RedirectToAction("Index");
@@ -168,11 +173,7 @@ namespace StoreCard.Controllers
                 {
                     return View();
                 }
-            }
-            catch (Exception ex)
-            {
-                ModelState.AddModelError(String.Empty, ex);
-            }
+            
             return View(card);
         }
     }
